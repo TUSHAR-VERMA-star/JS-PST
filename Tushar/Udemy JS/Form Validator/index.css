@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.form-control.error input{
+    border-color: red;
+    border-radius: 7%;
+}
+
+.form-control.success input{
+    border-color: green;
+    border-radius: 7%;
+}
+
+.form-control input {
+    /* display: block; */
+    padding: 10px;
+    margin: 10px;
+}
+
+.form-control small{
+    display: block;
+    visibility: hidden;
+    color: red;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
