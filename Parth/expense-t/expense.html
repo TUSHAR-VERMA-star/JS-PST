@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="expense.css">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <h4>YOUR BALANCE</h4>
+    <p>$</p><h2 id="your-bal">0.00</h2>
+    <div class="displ">
+        <div class="disp" id="incomes">
+            <h3>INCOME</h3>
+            <p>$</p><p id="income">0.00</p>
+        </div>
+        <div class="disp" id="expenses">
+            <h3>EXPENSE</h3>
+            <p>$</p><p id="expense">0.00</p>
+        </div>
+    </div>
+    <p>History</p>
+    <ul id = "trans"></ul>
+    
+    <h4>Add New Transaction</h4>
+    <p>Text</p>
+    <input type="text" id="trans-d">
+    <p>Amount</p>
+    <input type="number" id = "trans-a">
+    <br>
+    <br>
+    <button id="Add" onclick="entry()">Add transaction</button>
+    <script src="expense.js"></script>
+</body>
+</html>

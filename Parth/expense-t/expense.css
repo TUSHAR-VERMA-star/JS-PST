@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    
+}
+.displ{
+    display:flex;
+    /* padding: 5px 10px; */
+    text-align: center;
+    margin-left: 37%;
+}
+.disp{
+    margin:40px;
+    text-align: center;
+}
