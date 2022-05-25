@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <table>
+        <tr>
+            <td colspan=3>
+                <input type="text" id="question">
+            </td>
+            <td>&nbsp <button onclick="clearr()">C</button> &nbsp</td>
+        </tr>
+        <tr>
+            <td>&nbsp <button onclick="values('1')" >1</button></td>
+            <td>&nbsp <button onclick="values('2')" >2</button></td>
+            <td>&nbsp <button onclick="values('3')" >3</button></td>
+            <td>&nbsp <button onclick="values('+')" >+</button></td>
+        </tr>
+        <tr>
+            <td>&nbsp <button onclick="values('4')">4</button></td>
+            <td>&nbsp <button onclick="values('5')">5</button></td>
+            <td>&nbsp <button onclick="values('6')">6</button></td>
+            <td>&nbsp <button onclick="values('-')">-</button></td>
+        </tr>
+        <tr>
+            <td>&nbsp <button onclick="values('7')">7</button></td>
+            <td>&nbsp <button onclick="values('8')">8</button></td>
+            <td>&nbsp <button onclick="values('9')">9</button></td>
+            <td>&nbsp <button onclick="values('*')">*</button></td>
+        </tr>
+        <tr>
+            <td>&nbsp <button onclick="values('.')">.</button></td>
+            <td>&nbsp <button onclick="values('0')">0</button></td>
+            <td>&nbsp <button onclick="result()">=</button></td>
+            <td>&nbsp <button onclick="values('/')">/</button></td>
+        </tr>
+    </table>
+    <script src="calculator.js"></script>
+</body>
+</html>
