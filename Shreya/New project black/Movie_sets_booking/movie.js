@@ -1,15 +1,25 @@
+const container = document.querySelector('.container')
+const ticketPrice = +document.getElementById('movie').value
 
-let count = 1
-function calculate(val) {
-    document.getElementById(val).textContent = count
-    document.getElementById(val).style.backgroundColor = "cyan";
-    document.getElementById("selected-btn").style.backgroundColor = "cyan";
-
-    const collection = document.getElementsByClassName("occupied-btn");
-    for (let i = 0; i < collection.length; i++) {
-        collection[i].style.backgroundColor = "pink";
+container.addEventListener('click', function (e)
+{
+    if(e.target.classList.contains('seat') && !e.target.classList.contains('occupied'))
+    {
+        e.target.classList.toggle('selected')
+        if(e.target.classList.contains('selected'))
+        {
+            var c = +document.getElementById('count').textContent
+            c+=1
+            document.getElementById('count').textContent = c
+            document.getElementById('total').textContent = c*ticketPrice
+        }
+        else
+        {
+            var c = +document.getElementById('count').textContent
+            c-=1
+            document.getElementById('count').textContent = c
+            document.getElementById('total').textContent = c*ticketPrice
+        }
+        
     }
-    
-    document.getElementById("price").textContent = "you have selected " + count + "seats and total cost is " + count*10
-
-}
+})
