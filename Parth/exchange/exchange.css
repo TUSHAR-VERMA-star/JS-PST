@@ -1,0 +1,30 @@
+:root{
+    --primary-color:#5fbaa7;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    margin:0;
+    padding:20px;
+
+
+}
+h1{
+    color:var{var(--primary-color)};
+
+}
+p{
+    text
+}
+.money-img{
+
+}
+.currency{P
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+
+    <div id="output">
+    <button id="getText">Get Text</button>
+    </div>
+
+    <script>
+        document.getElementById('getText').addEventListener('click', gettText);
+
+        function gettText(){
+            // fetch('sample.txt')
+            // .then
+                        //     return res.text();
+            // })
+            // .then(function(data){
+            //     console.log(data);
+            // });
+
+            fetch('sample.txt').then((res) => res.text()).then((data) => {
+                document.getElementById('output').innerHTML = data;
+            })
+            .catch((err) => console.log(err))
+        }
+    </script>
