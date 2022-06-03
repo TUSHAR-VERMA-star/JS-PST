@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+<body>
+    <h1>Fetch Api</h1>
+    <button id="textt">Text</button>
+    <button id="jsonn">Json</button>
+    <br><br>
+    <div id="textprint"></div>
+    <div id="jsontext"></div>
+
+    <script>
+        document.getElementById('textt').addEventListener('click', functionForText);
+        document.getElementById('jsonn').addEventListener('click', functionForJson);
+        function functionForText()
+        {
+            fetch('index.txt')
+            .then((res) => res.text())
+            .then((data) => 
+            {
+                document.getElementById('textprint').innerText = data
+            })
+
+        }
+       
+        function functionForJson()
+        {
+            document.getElementById('jsontext').innerHTML = `br`
+            fetch('index.json')
+            .then((res) => res.json())
+            .then((data) => 
+            {
+                data.forEach(function(ele) 
+                {
+                    document.getElementById('jsontext').innerHTML += `
+                    <ul>
+                        <li> ID : ${ele.id}</li>
+                        <li> NAME : ${ele.Name}</li>
+                        <li> EMAIL : ${ele.Email}</li>
+                    </ul>
+                    <br>
+                    `
+                }
+                )
+            })
+        }
+    </script>
+
+</body>
+</html>
