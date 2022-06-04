@@ -75,6 +75,7 @@ function drawPaddle() {
 function drawScore() {
   ctx.font = '20px Arial';
   ctx.fillText(`Score: ${score}`, canvas.width - 100, 30);
+  // return true
 }
 
 // Draw bricks on canvas
@@ -106,8 +107,8 @@ function movePaddle() {
 
 // Move ball on canvas
 function moveBall() {
-  // ball.x += ball.dx;
-  // ball.y += ball.dy;
+  ball.x += ball.dx;
+  ball.y += ball.dy;
 
   // Wall collision (right/left)
   if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
