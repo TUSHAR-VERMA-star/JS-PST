@@ -24,7 +24,7 @@ const ball = {
 // Create paddle props
 const paddle = {
   x: canvas.width / 2 - 40,
-  y: canvas.height - 20,
+  y: canvas.height - 10,
   w: 80,
   h: 10,
   speed: 8,
@@ -107,8 +107,8 @@ function movePaddle() {
 
 // Move ball on canvas
 function moveBall() {
-  ball.x += ball.dx;
-  ball.y += ball.dy;
+  // ball.x += ball.dx;
+  // ball.y += ball.dy;
 
   // Wall collision (right/left)
   if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {

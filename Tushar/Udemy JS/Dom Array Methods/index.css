@@ -1,0 +1,21 @@
+#container{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    margin-left: 70px;
+}
+#user_details{
+  display: flex;
+}
+.btn{
+    margin: 10px;
+}
+li{
+    list-style: none;
+}
