@@ -1,5 +1,6 @@
 var folder = document.getElementById("folder")
 var s = "BYTES"
+var count = 0
 
 function calculateSize(sizee) {
     if (sizee >= 1000) {
@@ -36,6 +37,7 @@ function GetData(e) {
 
     table.innerHTML = `<br>`
     Element.innerHTML = `
+        <td>SNO.</td>
         <td>FILE NAME</td>
         <td>FILE SIZE</td>`
 
@@ -46,12 +48,14 @@ function GetData(e) {
 
         var Filesize = files[i].size;
         var sizee = calculateSize(Filesize)
+        count += 1
 
-        Element.innerHTML = `<td>${files[i].name}</td> 
+        Element.innerHTML = `<td> ${count}. </td> <td>${files[i].name}</td> 
                 <td>${parseFloat(sizee).toFixed(2)} ${s}</td>`;
 
         table.appendChild(Element);
     }
+    count = 0
 }
 
 
