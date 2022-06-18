@@ -50,7 +50,7 @@ function GetData(e) {
         var sizee = calculateSize(Filesize)
         count += 1
 
-        Element.innerHTML = `<td> ${count}. </td> <td>${files[i].name}</td> 
+        Element.innerHTML = `<td> ${count}. </td> <td>${files[i].webkitRelativePath}</td> 
                 <td>${parseFloat(sizee).toFixed(2)} ${s}</td>`;
 
         table.appendChild(Element);
