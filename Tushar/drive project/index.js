@@ -25,6 +25,13 @@ function calculateSize(sizee) {
 function GetData(e) {
     var table = document.querySelector("table");
     var files = e.target.files;
+
+    if (files.length >= 1) {
+        var path = files[0].webkitRelativePath.split('/');
+        document.getElementById("FolderName").innerHTML = `Selected Files from <u>${path[0].toUpperCase()}</u>`;
+    }
+
+
     var Element = document.createElement("tr");
 
     table.innerHTML = `<br>`
