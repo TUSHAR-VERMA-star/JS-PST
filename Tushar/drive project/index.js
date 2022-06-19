@@ -29,7 +29,7 @@ function GetData(e) {
 
     if (files.length >= 1) {
         var path = files[0].webkitRelativePath.split('/');
-        document.getElementById("FolderName").innerHTML = `Selected Files from <u>${path[0].toUpperCase()}</u>`;
+        document.getElementById("FolderName").innerHTML = `Selected Files from <u style="color:yellow">${path[0].toUpperCase()}</u>`;
     }
 
 
@@ -38,8 +38,8 @@ function GetData(e) {
     table.innerHTML = `<br>`
     Element.innerHTML = `
         <td>SNO.</td>
-        <td>FILE NAME</td>
-        <td>FILE SIZE</td>`
+        <td style="text-align:center; font-weight: bold;">FILE NAME</td>
+        <td style="font-weight: bold;">FILE SIZE</td>`
 
     table.appendChild(Element);
 
